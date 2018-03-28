@@ -1,0 +1,44 @@
+article>p {
+    width: 100%;
+    background: white;
+    padding: 1.5em 1em;
+}
+
+article.tweet {
+    margin: 2em;
+    border-radius: 10px;
+    border: 1px solid #8080807d
+  }
+
+header {
+    padding: 0.7em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+    background: #eee;
+}
+
+header .left {
+    display: flex;
+}
+
+header h2 {
+    padding-left: 0.5em;
+    margin: 0em;
+}
+
+footer {
+    padding: 0.7em;
+    background:white;
+    border-top: 1px solid #8080807d;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.profilePicture {
+    height: 50px;
+    border-radius: 5px;
+}
+
+header .right {
+    color: #808080;
+}
