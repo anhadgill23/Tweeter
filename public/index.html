@@ -29,7 +29,12 @@
   <!-- Couner JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+  <!-- Icons -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
 
+  <!-- Moment library for Time -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 
 </head>
 
@@ -39,36 +44,22 @@
   <nav id="nav-bar">
     <img class="logo" src="/images/bird.png">
     <span class="header">Tweeter</span>
+    <button type="button">Compose</button>
   </nav>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action='POST' method='/tweets/'>
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
+      <form id = 'composeTweet' action='POST' method='/tweets/'>
+        <textarea class = 'text' name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
     </section>
-    <article class='tweet'>
-      <header>
-        <div class=left>
-          <img class=profilePicture rofilePicture src="/images/profilePicture.jpg" alt="Mountain View">
-          <h2>Bill Fields</h2>
-        </div>
-        <div class=right andle>
-          @MrFields
-        </div>
-      </header>
-      <p>
-        hey there!
+    <section class="tweets-container">
 
-      </p>
-      <footer>
-        10 days ago
-      </footer>
-    </article>
+    </section>
   </main>
 </body>
 

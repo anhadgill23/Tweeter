@@ -28,10 +28,15 @@ header h2 {
 }
 
 footer {
-    padding: 0.7em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
     background:white;
     border-top: 1px solid #8080807d;
     border-radius: 0px 0px 10px 10px;
+}
+footer p {
+    margin: 0em;
 }
 
 .profilePicture {
