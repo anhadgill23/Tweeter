@@ -1,12 +1,12 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+* Client-side JS logic goes here
+* jQuery is already loaded
+* Reminder: Use (and do all your DOM work in) jQuery's document ready function
+*/
 
 
 $('#document').ready(function(e){
-    console.log("jQuery is ready.");
+    const $newTweet = $('.new-tweet');
 
     function createTweetElement (tweetObject){
         var timeConversion = moment().startOf(tweetObject.created_at).fromNow();
@@ -25,7 +25,6 @@ $('#document').ready(function(e){
         var $imgIcon1 = $("<i>").addClass('fas fa-flag').attr("src", "https://use.fontawesome.com/releases/v5.0.9/js/all.js");
         var $imgIcon2 = $("<i>").addClass('fas fa-retweet').attr("src", "https://use.fontawesome.com/releases/v5.0.9/js/all.js");
         var $imgIcon3 = $("<i>").addClass('fas fa-heart').attr("src", "https://use.fontawesome.com/releases/v5.0.9/js/all.js");
-
 
         ($header).appendTo($tweet);
         ($divLeft).appendTo($header);
@@ -53,6 +52,8 @@ $('#document').ready(function(e){
         } else {
             var data = $('form#composeTweet').serialize()
             $.post('/tweets/', data).done(loadTweets)
+            $('textarea').val('');
+            $input = 0;
         }
     });
 
@@ -60,7 +61,6 @@ $('#document').ready(function(e){
     function loadTweets() {
         $.get('/tweets/').done(renderTweets)
     }
-    loadTweets();
 
     function renderTweets (arrOfTweets) {
         arrOfTweets.forEach(function(item) {
@@ -70,4 +70,9 @@ $('#document').ready(function(e){
     }
 
 
+    $('#composeButton').on('click', function() {
+        $newTweet.slideToggle().find('.text').focus();
+    });
+
+    loadTweets();
 });

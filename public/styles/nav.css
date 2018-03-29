@@ -29,9 +29,5 @@
 }
 
 #nav-bar button:hover {
-    float: right;
-    height: 80%;
-    width: 8em;
-    margin-top: .5em;
     background-color:white;
 }
