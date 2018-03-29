@@ -2,8 +2,10 @@
 
 $(document).ready(function () {
     // console.log('this inside document.ready:', this);
-    $('textarea').on ('keypress',  function () {
-    var $input= 10 - $(this).val().length
+    var max = 140
+    $('textarea').on ('keyup',  function () {
+    var $input= max - $(this).val().length
+    //console.log($(this).val());
     var $charCount = $(this).siblings('.counter')
     $charCount.text($input);
 
