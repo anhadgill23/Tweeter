@@ -9,7 +9,7 @@ $('#document').ready(function(e){
     const $newTweet = $('.new-tweet');
 
     function createTweetElement (tweetObject){
-        var timeConversion = moment().startOf(tweetObject.created_at).fromNow();
+        var timeConversion = moment(tweetObject.created_at).fromNow();
 
         var $tweet = $("<article>").addClass("tweet");
         var $header = $("<header>");
@@ -68,6 +68,10 @@ $('#document').ready(function(e){
             $('.tweets-container').prepend($tweet)
         });
     }
+
+    $('button').click(function(){
+        $(".new-tweet").slideToggle().find('.text').focus();
+    });
 
 
     $('#composeButton').on('click', function() {
