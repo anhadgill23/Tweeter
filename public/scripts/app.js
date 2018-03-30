@@ -53,7 +53,7 @@ $('#document').ready(function(e){
             var data = $('form#composeTweet').serialize()
             $.post('/tweets/', data).done(loadTweets)
             $('textarea').val('');
-            $input = 0;
+            updateCounter();
         }
     });
 

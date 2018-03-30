@@ -30,9 +30,6 @@
 }
 
 #nav-bar button:hover {
-<<<<<<< HEAD
-=======
     color: black;
->>>>>>> feature/mongodb
     background-color:white;
 }

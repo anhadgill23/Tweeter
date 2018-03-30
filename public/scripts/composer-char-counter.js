@@ -1,19 +1,21 @@
 
-
-$(document).ready(function () {
-    // console.log('this inside document.ready:', this);
-    var max = 140
-    $('textarea').on ('keyup',  function () {
-    var $input= max - $(this).val().length
-    //console.log($(this).val());
-    var $charCount = $(this).siblings('.counter')
+function updateCounter() {
+    var max = 140;
+    var $textarea = $('textarea');
+    var $input= max - $textarea.val().length;
+    var $charCount = $textarea.siblings('.counter');
     $charCount.text($input);
 
     if ($input < 0) {
-        $charCount.css('color', 'red')
+        $charCount.css('color', 'red');
     }
-    });
-})
+}
+
+
+$(document).ready(function () {
+    // console.log('this inside document.ready:', this);
+    $('textarea').on('keyup',  updateCounter);
+});
 
 /*
 Tip: You could re-target the textarea using the same selector you've used in this file to
