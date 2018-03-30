@@ -69,11 +69,6 @@ $('#document').ready(function(e){
         });
     }
 
-    $('button').click(function(){
-        $(".new-tweet").slideToggle().find('.text').focus();
-    });
-
-
     $('#composeButton').on('click', function() {
         $newTweet.slideToggle().find('.text').focus();
     });
