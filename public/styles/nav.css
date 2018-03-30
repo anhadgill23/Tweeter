@@ -21,6 +21,7 @@
 }
 
 #nav-bar button {
+    color: #00a087;
     float: right;
     height: 80%;
     width: 8em;
@@ -29,5 +30,9 @@
 }
 
 #nav-bar button:hover {
+<<<<<<< HEAD
+=======
+    color: black;
+>>>>>>> feature/mongodb
     background-color:white;
 }

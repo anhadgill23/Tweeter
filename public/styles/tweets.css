@@ -8,14 +8,13 @@ article>p {
 article.tweet {
     margin: 2em;
     border-radius: 10px;
-    border: 1px solid #8080807d
+    border: 1px solid #8080807d;
+    opacity: 0.8;
   }
 
-  article.tweet:hover {
-    margin: 2em;
-    border-radius: 10px;
-    border: 1px solid #8080807d
-  }
+article.tweet:hover {
+    opacity: 1;
+}
 
 header {
     padding: 0.7em;
@@ -42,6 +41,14 @@ footer {
     border-top: 1px solid #8080807d;
     border-radius: 0px 0px 10px 10px;
 }
+
+.icons {
+    opacity: 0;
+}
+article.tweet:hover .icons {
+    opacity: 1;
+}
+
 footer p {
     margin: 0em;
 }
