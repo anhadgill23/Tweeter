@@ -70,8 +70,7 @@ $('#document').ready(function(e){
     }
 
     $('button').click(function(){
-        $(".new-tweet").slideToggle()
-        $('.text').focus();
+        $(".new-tweet").slideToggle().find('.text').focus();
     });
 
 
