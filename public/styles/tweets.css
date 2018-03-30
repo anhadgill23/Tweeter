@@ -2,9 +2,16 @@ article>p {
     width: 100%;
     background: white;
     padding: 1.5em 1em;
+    text-overflow: ellipsis;
 }
 
 article.tweet {
+    margin: 2em;
+    border-radius: 10px;
+    border: 1px solid #8080807d
+  }
+
+  article.tweet:hover {
     margin: 2em;
     border-radius: 10px;
     border: 1px solid #8080807d
